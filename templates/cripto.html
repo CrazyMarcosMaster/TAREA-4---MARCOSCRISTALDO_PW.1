@@ -2,10 +2,10 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>API Criptomonedas - CoinGecko</title>
+    <title>API Criptomonedas</title>
     <link rel="stylesheet" href="../statics/styles.css">
-    <script src="../js/cripto.js" defer></script>
     <script src="../js/script_bienvenida.js" defer></script>
+    <script src="../js/cripto.js" defer></script>
 </head>
 <body>
 <header class="header">
@@ -14,20 +14,20 @@
 </header>
 
 <main class="container">
-    <select id="selectMoneda">
+    <select id="moneda">
         <option value="">Selecciona una moneda</option>
         <option value="bitcoin">Bitcoin</option>
         <option value="ethereum">Ethereum</option>
         <option value="dogecoin">Dogecoin</option>
     </select>
-    <button id="btnBuscarCripto">Buscar</button>
+    <button id="buscarCripto">Buscar</button>
     <a href="../index.html" class="btn link-home">Inicio</a>
 
-    <div id="resultadoCripto" class="card hidden">
-        <h2 id="criptoNombre"></h2>
-        <p>Precio USD: <span id="criptoPrecio"></span></p>
-        <p>Cambio 24h: <span id="criptoCambio"></span></p>
-        <p>Market Cap: <span id="criptoMarketCap"></span></p>
+    <div id="resultado" class="card hidden">
+        <h2 id="nombreCripto"></h2>
+        <p>Precio USD: <span id="precio"></span></p>
+        <p>Cambio 24h: <span id="cambio"></span></p>
+        <p>Market Cap: <span id="market"></span></p>
     </div>
 </main>
 </body>
