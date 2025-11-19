@@ -1,5 +1,5 @@
 document.getElementById("buscarRick").addEventListener("click", async () => {
-    const id = document.getElementById("id").value;
+    const id = document.getElementById("id").value.trim();
     const resultado = document.getElementById("resultado");
     if (!id) return alert("Ingrese un ID");
 
