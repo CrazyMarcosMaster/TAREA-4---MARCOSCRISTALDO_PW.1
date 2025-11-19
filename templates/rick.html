@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>API Rick & Morty</title>
     <link rel="stylesheet" href="../statics/styles.css">
-    <script src="../js/rick.js" defer></script>
     <script src="../js/script_bienvenida.js" defer></script>
+    <script src="../js/rick.js" defer></script>
 </head>
 <body>
 <header class="header">
@@ -14,15 +14,15 @@
 </header>
 
 <main class="container">
-    <input type="text" id="idPersonaje" placeholder="ID del personaje">
-    <button id="btnBuscarRick">Buscar</button>
+    <input type="number" id="id" placeholder="ID del personaje">
+    <button id="buscarRick">Buscar</button>
     <a href="../index.html" class="btn link-home">Inicio</a>
 
-    <div id="resultadoRick" class="card hidden">
-        <img id="rickImagen" src="" alt="Imagen personaje">
-        <h2 id="rickNombre"></h2>
-        <p>Estado: <span id="rickEstado"></span></p>
-        <p>Especie: <span id="rickEspecie"></span></p>
+    <div id="resultado" class="card hidden">
+        <img id="imagenRick" src="" alt="Imagen personaje">
+        <h2 id="nombreRick"></h2>
+        <p>Estado: <span id="estado"></span></p>
+        <p>Especie: <span id="especie"></span></p>
     </div>
 </main>
 </body>
