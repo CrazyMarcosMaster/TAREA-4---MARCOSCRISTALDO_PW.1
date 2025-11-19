@@ -2,10 +2,10 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>API Países - REST Countries</title>
+    <title>API Países</title>
     <link rel="stylesheet" href="../statics/styles.css">
-    <script src="../js/paises.js" defer></script>
     <script src="../js/script_bienvenida.js" defer></script>
+    <script src="../js/paises.js" defer></script>
 </head>
 <body>
 <header class="header">
@@ -14,17 +14,16 @@
 </header>
 
 <main class="container">
-    <input type="text" id="nombrePais" placeholder="Ingrese país">
-    <button id="btnBuscarPais">Buscar</button>
+    <input type="text" id="pais" placeholder="Ingrese país">
+    <button id="buscarPais">Buscar</button>
     <a href="../index.html" class="btn link-home">Inicio</a>
 
-    <div id="resultadoPais" class="card hidden">
-        <h2 id="paisNombre"></h2>
-        <p>Capital: <span id="paisCapital"></span></p>
-        <p>Población: <span id="paisPoblacion"></span></p>
-        <img id="paisBandera" src="" alt="Bandera" class="flag">
+    <div id="resultado" class="card hidden">
+        <h2 id="nombrePais"></h2>
+        <p>Capital: <span id="capital"></span></p>
+        <p>Población: <span id="poblacion"></span></p>
+        <img id="bandera" src="" alt="Bandera" class="flag">
     </div>
 </main>
 </body>
 </html>
-
