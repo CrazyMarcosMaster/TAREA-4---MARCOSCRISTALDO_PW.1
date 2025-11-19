@@ -2,33 +2,44 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>API Clima</title>
+    <title>API Clima - OpenWeather</title>
     <link rel="stylesheet" href="../statics/styles.css">
+    <script src="../js/script_bienvenida.js" defer></script>
     <script src="../js/clima.js" defer></script>
 </head>
 <body>
 <header class="header">
-    <img src="../statics/images/clima.png" class="icon" alt="Clima">
-    <h1>API del Clima</h1>
+    <img src="../statics/images/clima.png" alt="Clima" class="logo">
+    <h1>Clima — OpenWeather</h1>
+    <p id="bienvenida-peq"></p>
 </header>
 
-<div class="container">
-    <input type="text" id="ciudad" placeholder="Ingrese ciudad">
-    <button id="buscarClima" class="btn">Buscar</button>
-    <button id="btnAsuncion" class="btn outline">Mostrar Asunción</button>
+<main class="main container">
+    <div class="controls">
+        <input id="ciudad" type="text" placeholder="Ej: Asunción">
+        <button id="btnBuscar" class="btn">Buscar</button>
+        <button id="btnAsuncion" class="btn outline">Mostrar Asunción</button>
+        <a href="../index.html" class="btn link-home">Inicio</a>
+    </div>
+
     <div id="error" class="error hidden"></div>
 
-    <div id="resultado" class="card hidden">
-        <img id="icono" class="weather-icon" alt="icono del clima">
-        <h3 id="nombreCiudad"></h3>
-        <p>Temperatura: <span id="temperatura">--</span> °C</p>
-        <p>Humedad: <span id="humedad">--</span> %</p>
-        <p>Viento: <span id="viento">--</span> m/s</p>
-        <p>Clima: <span id="descripcion">--</span></p>
-    </div>
-    <a class="btn link-home" href="index.html">Inicio</a>
+    <div id="cardResultado" class="result-card hidden">
+        <div class="result-top">
+            <img id="icono" alt="icono clima" class="weather-icon">
+            <div>
+                <h2 id="nombreCiudad"></h2>
+                <p id="descripcion" class="muted"></p>
+            </div>
+        </div>
 
-</div>
+        <div class="result-stats">
+            <div><strong>Temperatura</strong><div id="temperatura">-- °C</div></div>
+            <div><strong>Humedad</strong><div id="humedad">-- %</div></div>
+            <div><strong>Viento</strong><div id="viento">-- m/s</div></div>
+        </div>
+    </div>
+</main>
 </body>
 </html>
+
