@@ -2,13 +2,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const mensaje = document.getElementById('mensajeBienvenida');
     const nombreUsuario = document.getElementById('nombreUsuario');
 
-    let nombre = prompt("Por favor, ingresa tu nombre:");
-    let apellido = prompt("Por favor, ingresa tu apellido:");
-
-    if(nombre && apellido){
-        mensaje.textContent = `¡Bienvenido al proyecto, ${nombre} ${apellido}!`;
-        nombreUsuario.textContent = `Hola, ${nombre} ${apellido}`;
+    // Verifica si ya se ingresó nombre y apellido
+    if (!sessionStorage.getItem('nombreCompleto')) {
+        let nombre = prompt("Por favor, ingresa tu nombre:");
+        let apellido = prompt("Por favor, ingresa tu apellido:");
+        if(nombre && apellido){
+            const nombreCompleto = `${nombre} ${apellido}`;
+            sessionStorage.setItem('nombreCompleto', nombreCompleto);
+            if(mensaje) mensaje.textContent = `¡Bienvenido al proyecto, ${nombreCompleto}!`;
+            if(nombreUsuario) nombreUsuario.textContent = `Hola, ${nombreCompleto}`;
+        }
     } else {
-        mensaje.textContent = "Bienvenido al proyecto. Selecciona la API que deseas explorar:";
+        // Si ya existe en sessionStorage, mostrarlo
+        const nombreCompleto = sessionStorage.getItem('nombreCompleto');
+        if(mensaje) mensaje.textContent = `¡Bienvenido al proyecto, ${nombreCompleto}!`;
+        if(nombreUsuario) nombreUsuario.textContent = `Hola, ${nombreCompleto}`;
     }
 });
