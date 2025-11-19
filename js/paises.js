@@ -1,5 +1,5 @@
 document.getElementById("buscarPais").addEventListener("click", async () => {
-    const pais = document.getElementById("pais").value;
+    const pais = document.getElementById("pais").value.trim();
     const resultado = document.getElementById("resultado");
     if (!pais) return alert("Ingrese un país");
 
@@ -8,11 +8,10 @@ document.getElementById("buscarPais").addEventListener("click", async () => {
         const data = await resp.json();
         if (!data[0]) throw new Error("No encontrado");
 
-        const info = data[0];
-        document.getElementById("nombrePais").textContent = info.name.common;
-        document.getElementById("capital").textContent = info.capital ? info.capital[0] : "N/A";
-        document.getElementById("poblacion").textContent = info.population.toLocaleString();
-        document.getElementById("bandera").src = info.flags.png;
+        document.getElementById("nombrePais").textContent = data[0].name.common;
+        document.getElementById("capital").textContent = data[0].capital ? data[0].capital[0] : "N/A";
+        document.getElementById("poblacion").textContent = data[0].population.toLocaleString();
+        document.getElementById("bandera").src = data[0].flags.png;
         resultado.classList.remove("hidden");
     } catch(err) {
         alert("País no encontrado");
