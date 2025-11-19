@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const mensaje = document.getElementById('mensajeBienvenida');
     const nombreUsuario = document.getElementById('nombreUsuario');
 
-    // Verifica si ya se ingresó nombre y apellido
     if (!sessionStorage.getItem('nombreCompleto')) {
         let nombre = prompt("Por favor, ingresa tu nombre:");
         let apellido = prompt("Por favor, ingresa tu apellido:");
@@ -13,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if(nombreUsuario) nombreUsuario.textContent = `Hola, ${nombreCompleto}`;
         }
     } else {
-        // Si ya existe en sessionStorage, mostrarlo
         const nombreCompleto = sessionStorage.getItem('nombreCompleto');
         if(mensaje) mensaje.textContent = `¡Bienvenido al proyecto, ${nombreCompleto}!`;
         if(nombreUsuario) nombreUsuario.textContent = `Hola, ${nombreCompleto}`;
