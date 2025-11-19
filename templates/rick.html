@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>API Rick & Morty</title>
+    <link rel="stylesheet" href="../statics/styles.css">
+    <script src="../js/rick.js" defer></script>
+</head>
+<body>
+<header class="header">
+    <img src="../statics/images/rick.png" class="icon">
+    <h1>API Rick & Morty</h1>
+</header>
+
+<div class="container">
+    <input type="number" id="id" placeholder="Ingrese ID">
+    <button id="buscarRick">Buscar</button>
+
+    <div id="resultado" class="card hidden">
+        <h3 id="nombreRick"></h3>
+        <img id="imagenRick" src="" alt="Personaje" width="100">
+        <p>Estado: <span id="estado"></span></p>
+        <p>Especie: <span id="especie"></span></p>
+    </div>
+    <a class="btn link-home" href="index.html">Inicio</a>
+
+</div>
+</body>
+</html>

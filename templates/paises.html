@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>API Países</title>
+    <link rel="stylesheet" href="../statics/styles.css">
+    <script src="../js/paises.js" defer></script>
+</head>
+<body>
+<header class="header">
+    <img src="../statics/images/paises.png" class="icon">
+    <h1>API Países</h1>
+</header>
+
+<div class="container">
+    <input type="text" id="pais" placeholder="Ingrese país">
+    <button id="buscarPais">Buscar</button>
+
+    <div id="resultado" class="card hidden">
+        <h3 id="nombrePais"></h3>
+        <p>Capital: <span id="capital"></span></p>
+        <p>Población: <span id="poblacion"></span></p>
+        <img id="bandera" src="" alt="Bandera" width="100">
+    </div>
+    <a class="btn link-home" href="index.html">Inicio</a>
+
+</div>
+</body>
+</html>

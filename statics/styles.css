@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(120deg,#e0f7fa,#e1bee7);
+    margin:0;
+    padding:0;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+}
+.logo {
+    width: 60px;
+}
+
+/* ICONOS PEQUEÑOS */
+.icon {
+    width: 60px;
+    margin-bottom: 8px;
+}
+
+/* BOTONERA INDEX */
+.botonera {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 30px;
+}
+.card {
+    width: 160px;
+    padding: 12px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 5px 18px #0002;
+    text-decoration: none;
+    color: black;
+    transition: transform .2s, box-shadow .2s;
+}
+.card:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 10px 25px #0003;
+}
+
+/* PÁGINAS DE API */
+.container {
+    margin: 30px auto;
+    max-width: 720px;
+    padding: 0 15px;
+}
+
+input, select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    width: 60%;
+    margin-right: 8px;
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    background: #4f46e5;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background .2s;
+}
+button:hover {
+    background: #3730a3;
+}
+
+/* CARDS DE RESULTADO */
+.card.hidden {
+    display: none;
+}
+
+.card {
+    margin: 20px auto;
+    width: 280px;
+    padding: 18px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0px 8px 30px rgba(15,23,42,0.08);
+}
+
+.error {
+    margin-top: 18px;
+    color: #8b0000;
+    background: #ffe6e6;
+    padding: 10px 14px;
+    border-radius: 8px;
+}
+
+h2#bienvenida {
+    margin-top: 20px;
+    color: #333;
+    font-size: 22px;
+}
+
+/* BOTONES GENERALES */
+button, .botonInicio {
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #4f46e5;
+    color: #fff;
+    transition: transform .2s, background .2s;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 12px;
+}
+button:hover, .botonInicio:hover {
+    transform: scale(1.1);
+    background: #3730a3;
+}
+
+/* CARD RESULTADOS */
+.card {
+    margin: 20px auto;
+    width: 280px;
+    padding: 18px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0px 8px 30px rgba(15,23,42,0.08);
+    transition: transform .2s, box-shadow .2s;
+}
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 12px 30px rgba(0,0,0,0.2);
+}
+.hidden {
+    display: none;
+}
+/* Botón de Inicio */
+.btn.link-home {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn.link-home:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
