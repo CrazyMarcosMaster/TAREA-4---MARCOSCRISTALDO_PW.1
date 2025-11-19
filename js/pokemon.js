@@ -1,5 +1,5 @@
 document.getElementById("buscarPokemon").addEventListener("click", async () => {
-    const nombre = document.getElementById("pokemon").value.toLowerCase();
+    const nombre = document.getElementById("pokemon").value.toLowerCase().trim();
     const resultado = document.getElementById("resultado");
     if (!nombre) return alert("Ingrese nombre o ID");
 
