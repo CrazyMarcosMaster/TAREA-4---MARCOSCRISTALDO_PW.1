@@ -2,28 +2,28 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>API Pokémon</title>
+    <title>API Pokémon - PokéAPI</title>
     <link rel="stylesheet" href="../statics/styles.css">
     <script src="../js/pokemon.js" defer></script>
+    <script src="../js/script_bienvenida.js" defer></script>
 </head>
 <body>
 <header class="header">
-    <img src="../statics/images/pokemon.png" class="icon">
+    <img src="../statics/images/pokemon.png" alt="Pokémon" class="logo">
     <h1>API Pokémon</h1>
 </header>
 
-<div class="container">
-    <input type="text" id="pokemon" placeholder="Ingrese nombre o ID">
-    <button id="buscarPokemon">Buscar</button>
+<main class="container">
+    <input type="text" id="pokemonInput" placeholder="Nombre o ID">
+    <button id="btnBuscarPokemon">Buscar</button>
+    <a href="../index.html" class="btn link-home">Inicio</a>
 
-    <div id="resultado" class="card hidden">
-        <h3 id="nombrePokemon"></h3>
-        <img id="imagenPokemon" src="" alt="Pokémon" width="100">
-        <p>Tipo: <span id="tipo"></span></p>
-        <p>Peso: <span id="peso"></span></p>
+    <div id="resultadoPokemon" class="card hidden">
+        <img id="pokemonImagen" src="" alt="Imagen Pokémon">
+        <h2 id="pokemonNombre"></h2>
+        <p>Tipo: <span id="pokemonTipo"></span></p>
+        <p>Peso: <span id="pokemonPeso"></span></p>
     </div>
-    <a class="btn link-home" href="index.html">Inicio</a>
-
-</div>
+</main>
 </body>
 </html>
