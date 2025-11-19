@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>API Clima - OpenWeather</title>
+    <title>API Clima</title>
     <link rel="stylesheet" href="../statics/styles.css">
     <script src="../js/script_bienvenida.js" defer></script>
     <script src="../js/clima.js" defer></script>
@@ -10,36 +10,24 @@
 <body>
 <header class="header">
     <img src="../statics/images/clima.png" alt="Clima" class="logo">
-    <h1>Clima — OpenWeather</h1>
-    <p id="bienvenida-peq"></p>
+    <h1>API del Clima</h1>
 </header>
 
-<main class="main container">
-    <div class="controls">
-        <input id="ciudad" type="text" placeholder="Ej: Asunción">
-        <button id="btnBuscar" class="btn">Buscar</button>
-        <button id="btnAsuncion" class="btn outline">Mostrar Asunción</button>
-        <a href="../index.html" class="btn link-home">Inicio</a>
-    </div>
+<main class="container">
+    <input id="ciudad" type="text" placeholder="Ej: Asunción">
+    <button id="btnBuscar">Buscar</button>
+    <button id="btnAsuncion">Mostrar Asunción</button>
+    <a href="../index.html" class="btn link-home">Inicio</a>
 
+    <div id="cardResultado" class="card hidden">
+        <h2 id="nombreCiudad"></h2>
+        <p>Temperatura: <span id="temperatura"></span> °C</p>
+        <p>Humedad: <span id="humedad"></span> %</p>
+        <p>Viento: <span id="viento"></span> m/s</p>
+        <p>Clima: <span id="descripcion"></span></p>
+        <img id="icono" alt="Icono Clima">
+    </div>
     <div id="error" class="error hidden"></div>
-
-    <div id="cardResultado" class="result-card hidden">
-        <div class="result-top">
-            <img id="icono" alt="icono clima" class="weather-icon">
-            <div>
-                <h2 id="nombreCiudad"></h2>
-                <p id="descripcion" class="muted"></p>
-            </div>
-        </div>
-
-        <div class="result-stats">
-            <div><strong>Temperatura</strong><div id="temperatura">-- °C</div></div>
-            <div><strong>Humedad</strong><div id="humedad">-- %</div></div>
-            <div><strong>Viento</strong><div id="viento">-- m/s</div></div>
-        </div>
-    </div>
 </main>
 </body>
 </html>
-
